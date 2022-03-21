@@ -1,0 +1,41 @@
+.login__main{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    width: 75% !important;
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-header{
+    background-color: rgba(128, 255, 212,0.7); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.col-1{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: aquamarine;
+
+}
+
+.col-11{
+    padding: 0px !important;
+}
+
+.login__main__image{
+    width: 50%;
+    padding: 10px;
+}
+
+.login__main__title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+.set-color-active-error{
+    color: red;   
+}
