@@ -5,11 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/stylesheet/style.css">
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/css.php') ?>   
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../src/script/main.js"></script>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/js.php') ?>   
 </head>
 <body>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/nav.php') ?>
@@ -30,7 +28,7 @@
                     <h4 class="custom-title custom-size"> <?php echo $dog["Nombre"]; ?></h4>
                     <div> <strong>DNI :</strong>   <label for=""> <?php echo $dog["DNI"]; ?></label></div>
                     <div> <strong>Raza :</strong>   <label for=""><?php echo $dog["Raza"]; ?></label></div>
-                    <div> <strong>Genero :</strong>   <label for=""><?php echo $dog["Genero"]; ?></label></div>
+                    <!-- <div> <strong>Genero :</strong>   <label for=""><?php echo $dog["Genero"]; ?></label></div> -->
                     <div> <strong>Nacimiento :</strong>   <label for=""><?php echo $dog["FechaNacimiento"]; ?></label></div>
                     <div class="d-flex justify-content-center p-2">
                         <!-- <button class="btn btn-warning" type="submit">Editar</button> -->

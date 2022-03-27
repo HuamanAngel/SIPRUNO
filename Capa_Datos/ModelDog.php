@@ -15,6 +15,13 @@ class ModelDog{
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getDogsForDni($dni){
+        $sql = "SELECT * FROM Perro WHERE DNI LIKE '".$dni."' AND status = 1";
+        $result = $this->obj_conexion->prepare($sql);
+        $result->execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }    
+
     public function getDogs(){
         $sql = "SELECT * FROM perro WHERE status = 1";
         $result = $this->obj_conexion->prepare($sql);
@@ -31,9 +38,9 @@ class ModelDog{
     }
 
     public function insertDog($DNI, $Nombre,$Fecha_Nacimiento,$Raza, $genero,
-     $foto){
-        $sql = "INSERT INTO perro (DNI, Nombre, Raza, Genero, FechaNacimiento, Foto) 
-        VALUES ('$DNI', '$Nombre', '$Raza', '$genero', '$Fecha_Nacimiento', '$foto')";
+     $foto, $id_usuario){
+        $sql = "INSERT INTO perro (DNI, Nombre, Raza, Genero, FechaNacimiento, Foto, user_id) 
+        VALUES ('$DNI', '$Nombre', '$Raza', '$genero', '$Fecha_Nacimiento', '$foto','$id_usuario')";
         $result = $this->obj_conexion->prepare($sql);
         $result->execute();
         return $result->rowCount();
