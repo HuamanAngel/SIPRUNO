@@ -36,71 +36,74 @@
         <?php endif ?>
         </div>
         <div class="custom-content-central">
-
             <h4 class="custom-title">Datos perruclinicos</h4>
+            <form action="../Capa_Logica/FromHistoricRegister.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="dni" value="<?php echo $dog["DNI"]; ?>" >
 
             <div class="row ">
-                <div class="col-sm-6 text-center">
-                    <img class="img-thumbnail" src="https://i.pinimg.com/564x/60/d8/f4/60d8f4bea703ad719167b03d2bfffad4.jpg" alt="">
+                <div class="col-sm-6 ">
+                    <div class="text-center">
+                        <label for="" class="p-1 text-center"><strong> Inserte los sintomas </strong></label> 
+                    </div>
+
+                <br>
+
+                <label for="" class="p-1">Fiebre</label> 
+                <input name="simptoms" value="<?php  echo (isset($dogDetail['detail_symptom']) ? $dogDetail['detail_symptom'] : '')  ?>" type="text" class="form-control p-2">
+<!-- 
+                <label for="" class="p-1">Tos</label>                 
+                <input name="simptoms" type="text" class="form-control p-2">
+
+                <label for="" class="p-1">Gripe</label>                 
+                <input name="simptoms" type="text" class="form-control p-2">
+
+                <label for="" class="p-1">Dolor de garganta</label>                 
+                <input name="simptoms" type="text" class="form-control p-2">
+
+                <label for="" class="p-1">Dificultad respitaroria</label>                 
+                <input name="simptoms" type="text" class="form-control p-2">
+
+                <label for="" class="p-1">Congestion nasal</label>                 
+                <input name="simptoms" type="text" class="form-control p-2">
+
+                <label for="" class="p-1">Cefalea</label>                 
+                <input name="simptoms" type="text" class="form-control p-2"> -->
+
+
                 </div>
                 <div class="col-sm-6">
 
 
-                    <h4 class="custom-title custom-size">Registro canino</h4>
-
-                    <form action="../Capa_Logica/Registrar_perro.php" method="POST" enctype="multipart/form-data">
-                        <label for="" class="p-1">Ingresar Codigo</label> 
-                        <Input name = "Codigo" type="text" class="form-control p-2">
+                    <!-- <h4 class="custom-title custom-size">Registro canino</h4> -->
                         <br>
-                        <label for="" class="p-1">Ingresar Nombre</label> 
-                        <Input name = "Nombre" type="text" class="form-control p-2">
+                        <label for="" class="p-1">Inserte imagen de rayos X</label> 
+                        <div class="custom-file">
+                            <input name="rayx" type="file" class="custom-file-input" id="validatedCustomFile">
+                            <br>
+                            <?php if (isset($dogDetail['detail_blood_diagnostic'])): ?>
+                                Imagen insertada : <?php  echo (isset($dogDetail['detail_blood_diagnostic']) ? $dogDetail['detail_blood_diagnostic'] : '')  ?>
+                            <?php endif ?>
+                        </div>                        
                         <br>
-                        <label for="" class="p-1">Fecha de Nacimiento</label> 
-                        <Input name= "FechNac" type="Date" class="form-control p-2">
+                        <label for="" class="p-1">Inserte diagnostico de sangre</label> 
+                        <input name= "diagnostic" value="<?php  echo (isset($dogDetail['detail_blood_diagnostic']) ? $dogDetail['detail_blood_diagnostic'] : '')  ?>" type="text" class="form-control p-2">
                         
                         <br>
 
-                        <label for="" class="p-1">Genero</label>
-                        <div class="form-check">
-                        <input value="1" class="form-check-input" type="radio" name="Genero" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Hembra
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <input value="2" class="form-check-input" type="radio" name="Genero" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Macho
-                        </label>
-                        </div>                    
-                        <br>
+                        <label for="" class="p-1">Inserte la medicina</label>
+                        <input name= "medicine" value="<?php  echo (isset($dogDetail['detail_medicine']) ? $dogDetail['detail_medicine'] : '')  ?>" type="text" class="form-control p-2">
 
-                        <label for="" class="p-1">Seleccione Raza</label> 
-                        <Select name = "Raza" class="form-control p-2">
-                        <Option value = "Pitbull"> Pitbull
-                        <Option value = "Bulldog"> Bulldog
-                        <Option value = "Shichu"> Shichu
-                        <Option value = "Pequines"> Pequines
-                        <Option value = "San Bernardo"> San Bernardo
-                        <Option value = "Chiguahua"> Chiguahua
-                        </Select>
                         <br>
-                        <label for="" class="p-1">Subir Foto</label> 
-                        <br>
-                        <div class="custom-file">
-                            <input name="Foto" type="file" class="custom-file-input" id="validatedCustomFile" required>
-                        </div>                        
-                        <div class="d-flex justify-content-center p-4">
-                            <button type="submit" class="btn btn-success ">Registrar</button>
-                        </div>                        
+                        <label for="" class="p-1">Inserte costo de consula</label> 
+                        S/ <input name= "cost" value="<?php  echo (isset($dogDetail['detail_cost_consultation']) ? $dogDetail['detail_cost_consultation'] : '')  ?>" type="number" class="form-control p-2">
                             
-                    </form>    
                 </div>
                 <div for="" class="d-flex justify-content-center p-4">
-                    <a class="custom-link-to" href="http://localhost:8087/tarea1/Capa_Presentacion/FormConsultarPerro.php">Consulta Perruna &#10140;</a>
+                    <button type="submit" class="btn btn-success">  <?php  echo (isset($dogDetail) ? 'Actualizar historia' : 'Agregar historia')  ?> </button>
                 </div>
 
             </div>
+            </form>    
         </div>
 
     </main>

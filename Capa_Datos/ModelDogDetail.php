@@ -8,6 +8,12 @@ class ModelDogDetail{
         $this->obj_conexion =  new PDO($dsn, "root", "oxipusio");        
     }
 
+    public function getForDni($dni){
+        $sql = "SELECT * FROM perro_detail WHERE DNI LIKE '".$dni."' ";
+        $result = $this->obj_conexion->prepare($sql);
+        $result->execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
     public function insertDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation){
         $sql = "INSERT INTO perro_detail (DNI, detail_symptom, detail_ray_img, detail_blood_diagnostic, detail_medicine, detail_cost_consultation)
         VALUES ('$DNI', '$symptom', '$ray_img', '$blood_diagnostic', '$medicine', '$cost_consultation')";
