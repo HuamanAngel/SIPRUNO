@@ -1,5 +1,8 @@
 <?php
-    session_start();
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 ?>
 <header>
         <nav class="index__header__nav index__header__nav-container">
@@ -14,6 +17,8 @@
                     <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_is_admin']) ): ?>
                         <?php if ($_SESSION['user_is_admin'] ==  '1' ): ?>
                             <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Logica/Show_All_dog.php" ?>">Listar Canes</a></li>
+                        <?php else: ?>
+                            <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Logica/ConsultarDeudas.php" ?>">Deudas</a></li>
                         <?php endif ?>
                         <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Presentacion/FormRegistrarPerro.php" ?>">Registro Canino</a></li>
                         <li><a href="#"> <?php echo $_SESSION['user_name']; ?></a></li>

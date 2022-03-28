@@ -14,6 +14,15 @@ class ModelDogDetail{
         $result->execute();
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getForOwner($id){
+        $sql = "SELECT * FROM perro_detail INNER JOIN perro ON perro.DNI = perro_detail.DNI WHERE perro.user_id = '".$id."' ";
+        // $sql = "SELECT * FROM perro_detail INNER JOIN users ON users.user_id = perro_detail.user_veterinary_id WHERE DNI LIKE '".$dni."' ";
+        $result = $this->obj_conexion->prepare($sql);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function insertDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation,$idVeterinary){
 
         $sql = "INSERT INTO perro_detail(DNI,detail_symptom,detail_ray_img,detail_blood_diagnostic,detail_medicine,detail_cost_consultation,user_veterinary_id)
