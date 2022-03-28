@@ -19,7 +19,8 @@
 
     session_start();
     $dogModelDetail->insertDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
-    $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id']);
+    $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id'],$_REQUEST['detail_vomitos'],$_REQUEST['detail_apetito'],$_REQUEST['detail_fiebre'],$_REQUEST['detail_debilidad']);
+
     // if($dog){
     //     $dogModelDetail->updateDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
     //     $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id']);

@@ -43,4 +43,13 @@
   opacity: 1;
 }
 
+.label-form-now{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.8rem;
+    width: 50%;
+    max-width: 200px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 </style>

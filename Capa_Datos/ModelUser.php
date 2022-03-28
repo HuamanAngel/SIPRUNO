@@ -7,6 +7,14 @@
             $this->obj_conexion =  new PDO($dsn, "root", "oxipusio");        
         }
         
+        public function getAllVeterinary()
+        {
+            $sql = "SELECT * FROM users WHERE user_is_admin = 1";
+            $result = $this->obj_conexion->prepare($sql);
+            $result->execute();
+            return $result->fetchAll(PDO::FETCH_ASSOC);
+        }
+
         public function loginCheck($username,$password)
         {
             $password_md5 = md5($password);

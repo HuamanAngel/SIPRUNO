@@ -47,12 +47,31 @@
                     </div>
 
                 <br>
+                <label for="" class="label-form-now p-1">Tos : </label>                 
+                <input name="detail_vomitos" value="1" type="radio" class=" p-2">Si
+                <input name="detail_vomitos" value="0" type="radio" checked class=" p-2">No
 
-                <label for="" class="p-1">Fiebre</label> 
+                <br>
+                <label for="" class="label-form-now p-1">Apetito : </label>                 
+                <input name="detail_apetito" value="1" type="radio" class=" p-2">Si
+                <input name="detail_apetito" value="0" type="radio" checked class=" p-2">No
+
+                <br>
+                <label for="" class="label-form-now p-1">Fiebre : </label>                 
+                <input name="detail_fiebre" value="1" type="radio" class=" p-2">Si
+                <input name="detail_fiebre" value="0" type="radio" checked class=" p-2">No
+
+                <br>
+                <label for="" class="label-form-now p-1">Debilidad : </label>                 
+                <input name="detail_debilidad" value="1" type="radio" class=" p-2">Si
+                <input name="detail_debilidad" value="0" type="radio" checked class=" p-2">No
+
+                <br>
+
+
+                <label for="" class="label-form-now p-1">Otros sintomas : </label> 
                 <input name="simptoms" value="<?php  echo (isset($dogDetail['detail_symptom']) ? $dogDetail['detail_symptom'] : '')  ?>" type="text" class="form-control p-2">
 <!-- 
-                <label for="" class="p-1">Tos</label>                 
-                <input name="simptoms" type="text" class="form-control p-2">
 
                 <label for="" class="p-1">Gripe</label>                 
                 <input name="simptoms" type="text" class="form-control p-2">
@@ -78,7 +97,7 @@
                         <br>
                         <label for="" class="p-1">Inserte imagen de rayos X</label> 
                         <div class="custom-file">
-                            <input name="rayx" type="file" class="custom-file-input" id="validatedCustomFile">
+                            <input name="rayx" required type="file" class="custom-file-input" id="validatedCustomFile">
                             <br>
                             <?php if (isset($dogDetail['detail_blood_diagnostic'])): ?>
                                 Imagen insertada : <?php  echo (isset($dogDetail['detail_blood_diagnostic']) ? $dogDetail['detail_blood_diagnostic'] : '')  ?>
@@ -95,7 +114,7 @@
 
                         <br>
                         <label for="" class="p-1">Inserte costo de consula</label> 
-                        S/ <input name= "cost" value="<?php  echo (isset($dogDetail['detail_cost_consultation']) ? $dogDetail['detail_cost_consultation'] : '')  ?>" type="number" class="form-control p-2">
+                        S/ <input type="number" required step="0.1" min="1" name= "cost" value="<?php  echo (isset($dogDetail['detail_cost_consultation']) ? $dogDetail['detail_cost_consultation'] : '')  ?>" type="number" class="form-control p-2">
                             
                 </div>
                 <div for="" class="d-flex justify-content-center p-4">

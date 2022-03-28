@@ -17,8 +17,10 @@
                     <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_is_admin']) ): ?>
                         <?php if ($_SESSION['user_is_admin'] ==  '1' ): ?>
                             <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Logica/Show_All_dog.php" ?>">Listar Canes</a></li>
+                            <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Logica/ShowCitasVeterinary.php" ?>">Mis citas</a></li>
                         <?php else: ?>
                             <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Logica/ConsultarDeudas.php" ?>">Deudas</a></li>
+                            <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Logica/ShowVeterinary.php" ?>">Citas</a></li>
                         <?php endif ?>
                         <li><a href="<?php echo "http://localhost:8087/tarea1/Capa_Presentacion/FormRegistrarPerro.php" ?>">Registro Canino</a></li>
                         <li><a href="#"> <?php echo $_SESSION['user_name']; ?></a></li>

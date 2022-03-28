@@ -23,10 +23,10 @@ class ModelDogDetail{
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function insertDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation,$idVeterinary){
+    public function insertDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation,$idVeterinary,$detail_vomitos=0,$detail_apetito=0,$detail_fiebre=0,$detail_debilidad=0){
 
-        $sql = "INSERT INTO perro_detail(DNI,detail_symptom,detail_ray_img,detail_blood_diagnostic,detail_medicine,detail_cost_consultation,user_veterinary_id)
-        VALUES ('$DNI', '$symptom', '$ray_img', '$blood_diagnostic', '$medicine', '$cost_consultation','$idVeterinary')";
+        $sql = "INSERT INTO perro_detail(DNI,detail_symptom,detail_ray_img,detail_blood_diagnostic,detail_medicine,detail_cost_consultation,user_veterinary_id,detail_vomitos,detail_apetito,detail_fiebre,detail_debilidad)
+        VALUES ('$DNI', '$symptom', '$ray_img', '$blood_diagnostic', '$medicine', '$cost_consultation','$idVeterinary','$detail_vomitos','$detail_apetito','$detail_fiebre','$detail_debilidad')";
         $result = $this->obj_conexion->prepare($sql);
         $result->execute();        
         return $result->rowCount();
