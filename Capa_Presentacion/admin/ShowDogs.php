@@ -23,7 +23,7 @@
             <div class="col-sm-3">
                 <div class="column">
                 </div>
-                <img class="img-thumbnail" src="<?php echo 'http://localhost:8087//tarea1/'.$dog["Foto"];?>" alt="">
+                <img class="img-thumbnail" style="height: 225px;" src="<?php echo 'http://localhost:8087//tarea1/'.$dog["Foto"];?>" alt="">
                 <form action="">
                     <h4 class="custom-title custom-size"> <?php echo $dog["Nombre"]; ?></h4>
                     <div class="row">
@@ -34,6 +34,10 @@
                             <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoric.php?code='.$dog["DNI"]; ?>" class="btn btn-info" style="padding: 0px; background-color:transparent;border-color:transparent;">
                                 <i style="color:teal;font-size: 2rem;" class="material-icons">add_box</i>
                             </a>
+                            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoricConsulta.php?code='.$dog["DNI"]; ?>" class="btn btn-info" style="padding: 0px; background-color:transparent;border-color:transparent;">
+                                <i style="color:burlywood ;font-size: 2rem;" class="material-icons">info</i>
+                            </a>
+
                         </div>
                     </div>
                     <div> <strong>DNI :</strong>   <label for=""> <?php echo $dog["DNI"]; ?></label></div>

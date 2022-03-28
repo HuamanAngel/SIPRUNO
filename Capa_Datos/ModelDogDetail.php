@@ -9,22 +9,23 @@ class ModelDogDetail{
     }
 
     public function getForDni($dni){
-        $sql = "SELECT * FROM perro_detail WHERE DNI LIKE '".$dni."' ";
+        $sql = "SELECT * FROM perro_detail INNER JOIN users ON users.user_id = perro_detail.user_veterinary_id WHERE DNI LIKE '".$dni."' ";
         $result = $this->obj_conexion->prepare($sql);
         $result->execute();
-        return $result->fetch(PDO::FETCH_ASSOC);
+        return $result->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function insertDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation){
-        $sql = "INSERT INTO perro_detail (DNI, detail_symptom, detail_ray_img, detail_blood_diagnostic, detail_medicine, detail_cost_consultation)
-        VALUES ('$DNI', '$symptom', '$ray_img', '$blood_diagnostic', '$medicine', '$cost_consultation')";
+    public function insertDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation,$idVeterinary){
+
+        $sql = "INSERT INTO perro_detail(DNI,detail_symptom,detail_ray_img,detail_blood_diagnostic,detail_medicine,detail_cost_consultation,user_veterinary_id)
+        VALUES ('$DNI', '$symptom', '$ray_img', '$blood_diagnostic', '$medicine', '$cost_consultation','$idVeterinary')";
         $result = $this->obj_conexion->prepare($sql);
-        $result->execute();
+        $result->execute();        
         return $result->rowCount();
     }
 
-    public function updateDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation){
+    public function updateDogDetail($DNI,$symptom,$ray_img,$blood_diagnostic,$medicine,$cost_consultation,$idVeterinary){
         $sql = "UPDATE perro_detail SET detail_symptom = '$symptom', detail_ray_img = '$ray_img', detail_blood_diagnostic = '$blood_diagnostic',
-        detail_medicine = '$medicine', detail_cost_consultation = '$cost_consultation' WHERE DNI = '$DNI'";
+        detail_medicine = '$medicine', detail_cost_consultation = '$cost_consultation'  WHERE DNI = '$DNI' AND user_veterinary_id = '$idVeterinary' ";
         $result = $this->obj_conexion->prepare($sql);
         $result->execute();
         return $result->rowCount();

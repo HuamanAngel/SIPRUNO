@@ -16,17 +16,18 @@
     $target_path = $_SERVER['DOCUMENT_ROOT'].'/tarea1/'.$target_path_real.'ray_'.$_REQUEST['dni'].'.'.$ext;
     $dog =$dogModelDetail->getForDni($_REQUEST['dni']);
     move_uploaded_file($temp, $target_path);
-    if($dog){
-        $dogModelDetail->updateDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
-        $_REQUEST['medicine'],$_REQUEST['cost']);
-    }else{
-        $dogModelDetail->insertDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
-        $_REQUEST['medicine'],$_REQUEST['cost']);
-    }
-    var_dump($dog);
-    var_dump($_REQUEST,$target_path,$dir_db);
+
     session_start();
-    $_SESSION["message"]="Opreacion registrada con exito";
+    $dogModelDetail->insertDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
+    $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id']);
+    // if($dog){
+    //     $dogModelDetail->updateDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
+    //     $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id']);
+    // }else{
+    //     $dogModelDetail->insertDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
+    //     $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id']);
+    // }
+    $_SESSION["message"]="Operacion registrada con exito";
     header("Location: ../Capa_Presentacion/FormConsultarPerro.php", TRUE, 301);
     exit();          
 ?>
