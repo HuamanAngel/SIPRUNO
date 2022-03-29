@@ -21,6 +21,15 @@
     $dogModelDetail->insertDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
     $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id'],$_REQUEST['detail_vomitos'],$_REQUEST['detail_apetito'],$_REQUEST['detail_fiebre'],$_REQUEST['detail_debilidad']);
 
+    // $validation = false;
+    // if(preg_match("/^[A-Z]/", $_REQUEST['Nombre'])){
+    //     $validation = true;
+    // }
+    // if(!$validation){
+    //     $_SESSION["message"]="Nombre invalido";
+    //     return include_once('../Capa_Presentacion/FormConsultarPerro.php');
+    // }
+
     // if($dog){
     //     $dogModelDetail->updateDogDetail($_REQUEST['dni'],$_REQUEST['simptoms'],$dir_db,$_REQUEST['diagnostic'],
     //     $_REQUEST['medicine'],$_REQUEST['cost'],$_SESSION['user_id']);
