@@ -37,7 +37,7 @@
                     <input type ="text" name = "Nombre" class="form-control p-2" >
 
                     <div class="d-flex justify-content-center p-4">
-                        <button type="submit" class="btn btn-success ">Buscar</button>
+                        <button type="submit" class="btn-verde">Buscar</button>
                     </div>
                 </form>
         

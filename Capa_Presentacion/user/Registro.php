@@ -58,7 +58,7 @@
                             </label>
                         </span>
                         <div class="d-flex justify-content-center">
-                            <button class="btn btn-success m-4 disabled" id="button-submit-register" type="submit">Registrar</button>
+                            <button class="btn-verde m-4 disabled" id="button-submit-register" type="submit">Registrar</button>
                         </div>
                     </div>             
 

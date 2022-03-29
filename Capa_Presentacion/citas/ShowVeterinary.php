@@ -15,7 +15,7 @@
     <main class="container custom-content-central">
         <h4 class="custom-title">! Elige a tu veterinario ¡</h4> 
         <div class="d-flex justify-content-end">
-            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/ShowCitas.php'; ?>" class="btn btn-success">Ver mis citas</a>
+            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/ShowCitas.php'; ?>" class="btn-verde">Ver mis citas</a>
         </div>
         <p class="text-center">
             <!-- Veterinarios disponibles : <?php echo $num_resultados; ?> -->
@@ -42,7 +42,7 @@
                     <!-- <div> <strong>DNI :</strong>   <label for=""> <?php echo $veterinary["user_name"]; ?></label></div>
                     <div> <strong>Nacimiento :</strong>   <label for=""><?php echo $veterinary["user_lastname"]; ?></label></div> -->
                     <div class="d-flex justify-content-center p-2">
-                        <button class="btn btn-warning" type="submit">Reservar Cita</button>
+                        <button class="btn-amarillo" type="submit">Reservar Cita</button>
                     </div>
                 </form>
 

@@ -510,3 +510,38 @@ main{
     margin: auto;
     width: 100%;
 }
+.btn-amarillo{
+    background-color: rgb(251, 99, 26) !important;
+    color:  rgba(252, 202, 97,1) !important;
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-verde{
+    background-color: green !important;
+    color:  white !important;
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-azul{
+    background-color: blue !important;
+    color:  white !important;
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-red{
+    background-color: red !important;
+    color:  white !important;
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}

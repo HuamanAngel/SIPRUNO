@@ -50,7 +50,7 @@
                         <input class="form-control" type="password" name="password" placeholder="Contraseña">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-success m-4" type="submit">Iniciar</button>
+                        <button class="btn-verde m-4" type="submit">Iniciar</button>
                     </div>
                 </div>
             </form>

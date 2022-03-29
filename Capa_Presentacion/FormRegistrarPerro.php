@@ -69,14 +69,14 @@
                         <input name="Foto" type="file" class="custom-file-input" id="validatedCustomFile" required>
                     </div>                        
                     <div class="d-flex justify-content-center p-4">
-                        <button type="submit" class="btn btn-success ">Registrar</button>
+                        <button type="submit" class="btn-verde ">Registrar</button>
                     </div>                        
                         
                 </form>    
             </div>
-            <div for="" class="d-flex justify-content-center p-4">
+            <!-- <div for="" class="d-flex justify-content-center p-4">
                 <a class="custom-link-to" href="http://localhost:8087/tarea1/Capa_Presentacion/FormConsultarPerro.php">Consulta Perruna &#10140;</a>
-            </div>
+            </div> -->
 
         </div>
     </main>

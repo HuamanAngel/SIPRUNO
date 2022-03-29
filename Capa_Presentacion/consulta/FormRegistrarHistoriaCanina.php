@@ -118,7 +118,7 @@
                             
                 </div>
                 <div for="" class="d-flex justify-content-center p-4">
-                    <button type="submit" class="btn btn-success">  <?php  echo (isset($dogDetail) ? 'Actualizar historia' : 'Agregar historia')  ?> </button>
+                    <button type="submit" class="btn-verde">  <?php  echo (isset($dogDetail) ? 'Actualizar historia' : 'Agregar historia')  ?> </button>
                 </div>
 
             </div>

@@ -53,7 +53,7 @@
                     <div class="d-flex justify-content-center p-2">
                         <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_is_admin']) ): ?>
                             <?php if ($_SESSION['user_is_admin'] ==  '1' ): ?>
-                                <button class="btn btn-danger" type="submit">Eliminar</button>
+                                <button class="btn-red" type="submit">Eliminar</button>
                             <?php endif ?>
                         <?php endif ?>
 

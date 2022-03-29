@@ -31,10 +31,10 @@
 
                         </div>
                         <div class="col-6 d-flex justify-content-end">                            
-                            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoric.php?code='.$dog["DNI"]; ?>" class="btn btn-info" style="padding: 0px; background-color:transparent;border-color:transparent;">
+                            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoric.php?code='.$dog["DNI"]; ?>" class="" style="padding: 0px; background-color:transparent;border-color:transparent;">
                                 <i style="color:teal;font-size: 2rem;" class="material-icons">add_box</i>
                             </a>
-                            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoricConsulta.php?code='.$dog["DNI"]; ?>" class="btn btn-info" style="padding: 0px; background-color:transparent;border-color:transparent;">
+                            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoricConsulta.php?code='.$dog["DNI"]; ?>" class="" style="padding: 0px; background-color:transparent;border-color:transparent;">
                                 <i style="color:burlywood ;font-size: 2rem;" class="material-icons">info</i>
                             </a>
 
@@ -55,7 +55,7 @@
                     <div class="d-flex justify-content-center p-2">
                         <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_is_admin']) ): ?>
                             <?php if ($_SESSION['user_is_admin'] ==  '1' ): ?>
-                                <button class="btn btn-danger" type="submit">Eliminar</button>
+                                <button class="btn-red" type="submit">Eliminar</button>
                             <?php endif ?>
                         <?php endif ?>
 
