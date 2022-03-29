@@ -18,15 +18,15 @@
 
         <div class="row ">
             <div class="col-sm-12">
-            <table class="table">
+            <table class="class-table">
                 <thead>
                     <tr>
-                        <th scope="col">DNI</th>
-                        <th scope="col">Perrunombre</th>
-                        <th scope="col">Fecha consulta</th>
-                        <th scope="col">Costo</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Consultas</th>
+                        <th scope="">DNI</th>
+                        <th scope="">Perrunombre</th>
+                        <th scope="">Fecha consulta</th>
+                        <th scope="">Costo</th>
+                        <th scope="">Estado</th>
+                        <th scope="">Consultas</th>
                     </tr>
                 </thead>
                 <tbody>

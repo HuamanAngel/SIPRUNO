@@ -26,11 +26,11 @@
             ?>        
         </p>
 
-        <div class="row ">
-            <div class="col-sm-6">
+        <div class="class-grid-now-6">
+            <div class="">
                 <img class="img-thumbnail" src="https://img.freepik.com/vector-gratis/personaje-dibujos-animados-perro-detective-siguiendo-pistas_20412-443.jpg?size=626&ext=jpg" alt="">
             </div>
-            <div class="col-sm-6">
+            <div class="">
                 <h4 class="custom-title custom-size">¿Buscando a tu perro? Puede consultar aqui</h4>
                 <form action="../Capa_Logica/FormConsultarPerro.php" class="" method="GET">
                     <label for=""></label> Ingresar nombre canino

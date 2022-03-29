@@ -477,3 +477,36 @@ main{
       color:  rgba(252, 202, 97,1);
       border-radius: 5%;
   }
+
+  .class-table{
+      width: 100%;
+  }
+  .class-grid-now-3{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+        margin: auto;
+        width: 100%;
+  }
+
+  .class-grid-now-4{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    margin: auto;
+    width: 100%;
+}
+.class-grid-now-6{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    margin: auto;
+    width: 100%;
+}
+.class-grid-now-12{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    margin: auto;
+    width: 100%;
+}

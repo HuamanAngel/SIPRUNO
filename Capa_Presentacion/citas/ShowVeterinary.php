@@ -20,11 +20,9 @@
         <p class="text-center">
             <!-- Veterinarios disponibles : <?php echo $num_resultados; ?> -->
         </p>
-        <div class="row ">
+        <div class="class-grid-now-3">
             <?php foreach ($result as $veterinary): ?>
-            <div class="col-sm-3">
-                <div class="column">
-                </div>
+            <div class="">
                 <img class="img-thumbnail" src="<?php echo 'http://localhost:8087/tarea1/src/assets/profile_doctor.jpg'?>" alt="">
                 <form action="http://localhost:8087/tarea1/Capa_Logica/RegisterCita.php" method="POST">
                     <h4 class="custom-title custom-size"> <?php echo $veterinary["user_name"].' '.$veterinary["user_lastname"]; ?></h4>

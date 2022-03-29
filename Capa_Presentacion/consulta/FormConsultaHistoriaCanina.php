@@ -66,27 +66,22 @@
                     </div>
 
                 <br>
+                
+                <label for="" class="label-form-now p-1">Tos : </label>                 
+                <input disabled name="simptoms" value="<?php echo $dogDetail['detail_vomitos']==1 ? 'Si': 'No'; ?>" type="text" class="form-control p-2">
 
-                <label for="" class="p-1">Fiebre</label> 
+                <label for="" class="label-form-now p-1">Apetito : </label>                 
+                <input disabled name="simptoms" value="<?php echo $dogDetail['detail_apetito']==1 ? 'Si': 'No'; ?>" type="text" class="form-control p-2">
+
+                <label for="" class="label-form-now p-1">Fiebre : </label>                 
+                <input disabled name="simptoms" value="<?php echo $dogDetail['detail_fiebre']==1 ? 'Si': 'No'; ?>" type="text" class="form-control p-2">
+
+                <label for="" class="label-form-now p-1">Debilidad : </label>                 
+                <input disabled name="simptoms" value="<?php echo $dogDetail['detail_debilidad']==1 ? 'Si': 'No'; ?>" type="text" class="form-control p-2">
+
+                <label for="" class="p-1">Sintomas adicionales</label> 
                 <input name="simptoms" disabled value="<?php  echo (isset($dogDetail['detail_symptom']) ? $dogDetail['detail_symptom'] : '')  ?>" type="text" class="form-control p-2">
-<!-- 
-                <label for="" class="p-1">Tos</label>                 
-                <input name="simptoms" type="text" class="form-control p-2">
 
-                <label for="" class="p-1">Gripe</label>                 
-                <input name="simptoms" type="text" class="form-control p-2">
-
-                <label for="" class="p-1">Dolor de garganta</label>                 
-                <input name="simptoms" type="text" class="form-control p-2">
-
-                <label for="" class="p-1">Dificultad respitaroria</label>                 
-                <input name="simptoms" type="text" class="form-control p-2">
-
-                <label for="" class="p-1">Congestion nasal</label>                 
-                <input name="simptoms" type="text" class="form-control p-2">
-
-                <label for="" class="p-1">Cefalea</label>                 
-                <input name="simptoms" type="text" class="form-control p-2"> -->
                 
                 </div>
                 <div class="col-sm-6">

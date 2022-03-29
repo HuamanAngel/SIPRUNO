@@ -17,11 +17,11 @@
 
         <h4 class="custom-title">Sistema de identificacion Perruno</h4>
 
-        <div class="row ">
-            <div class="col-sm-6 text-center">
+        <div class="class-grid-now-6">
+            <div class=" text-center">
                 <img class="img-thumbnail" src="https://i.pinimg.com/564x/60/d8/f4/60d8f4bea703ad719167b03d2bfffad4.jpg" alt="">
             </div>
-            <div class="col-sm-6">
+            <div class="">
 
 
                 <h4 class="custom-title custom-size">Registro canino</h4>

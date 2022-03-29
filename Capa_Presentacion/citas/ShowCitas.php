@@ -17,14 +17,14 @@
         <p class="text-center bg-danger text-white"></p>
         <div class="row ">
             <div class="col-sm-12">
-            <table class="table">
+            <table class="class-table">
                 <thead>
-                    <tr>
-                        <th scope="col">Costo</th>
-                        <th scope="col">Veterinario</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Hora</th>
-                        <th scope="col">Cita generada</th>
+                    <tr style="width: 100%;">
+                        <th scope="th-custom" >Costo</th>
+                        <th scope="th-custom">Veterinario</th>
+                        <th scope="th-custom">Fecha</th>
+                        <th scope="th-custom">Hora</th>
+                        <th scope="th-custom">Cita generada</th>
                     </tr>
                 </thead>
                 <tbody>

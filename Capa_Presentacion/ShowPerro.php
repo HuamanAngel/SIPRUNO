@@ -18,19 +18,19 @@
         <p class="text-center">
             Numero de perros encontrados : <?php echo $num_resultados; ?>
         </p>
-        <div class="row ">
+        <div class="class-grid-now-3 ">
             <?php foreach ($result as $dog): ?>
-            <div class="col-sm-3">
+            <div class="">
                 <div class="column">
                 </div>
                 <img class="img-thumbnail" src="<?php echo 'http://localhost:8087//tarea1/'.$dog["Foto"];?>" alt="">
                 <form action="">
                     <h4 class="custom-title custom-size"> <?php echo $dog["Nombre"]; ?></h4>
-                    <div class="row">
-                        <div class="col-6">
+                    <div class="class-grid-now-6">
+                        <div class="">
 
                         </div>
-                        <div class="col-6 d-flex justify-content-end">                            
+                        <div class=" d-flex justify-content-end">                            
                             <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoricConsulta.php?code='.$dog["DNI"]; ?>" class="btn btn-info" style="padding: 0px; background-color:transparent;border-color:transparent;">
                                 <i style="color:burlywood ;font-size: 2rem;" class="material-icons">info</i>
                             </a>
@@ -62,9 +62,9 @@
 
             </div>
             <?php endforeach ?>
-            <div for="" class="d-flex justify-content-center p-4">
+            <!-- <div for="" class="d-flex justify-content-center p-4">
                 <a class="custom-link-to" href="http://localhost:8087/tarea1/Capa_Presentacion/FormConsultarPerro.php">Hacer otra consulta &#10140;</a>
-            </div>
+            </div> -->
 
         </div>
     </main>
