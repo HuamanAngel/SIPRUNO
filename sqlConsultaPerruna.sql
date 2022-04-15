@@ -32,7 +32,7 @@ CREATE TABLE `cita` (
   KEY `user_veterinary` (`user_veterinary`),
   CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`user_client`) REFERENCES `users` (`user_id`),
   CONSTRAINT `cita_ibfk_2` FOREIGN KEY (`user_veterinary`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -54,7 +54,7 @@ CREATE TABLE `perro` (
   PRIMARY KEY (`DNI`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `perro_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,7 +82,7 @@ CREATE TABLE `perro_detail` (
   KEY `user_veterinary_id` (`user_veterinary_id`),
   CONSTRAINT `perro_detail_ibfk_1` FOREIGN KEY (`DNI`) REFERENCES `perro` (`DNI`),
   CONSTRAINT `perro_detail_ibfk_2` FOREIGN KEY (`user_veterinary_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +101,7 @@ CREATE TABLE `users` (
   `user_is_admin` int DEFAULT '0',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_username` (`user_username`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
