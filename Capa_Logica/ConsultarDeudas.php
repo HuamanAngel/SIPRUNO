@@ -1,6 +1,6 @@
 
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelDogDetail.php');   
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelDogDetail.php');   
     $DogDetailForUser = new ModelDogDetail();
     session_start();
 

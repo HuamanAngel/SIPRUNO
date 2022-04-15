@@ -18,6 +18,6 @@
 		$uri = 'http://';
 	}
 	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/tarea1/Capa_Presentacion/FormConsultarPerro.php');
+	header('Location: '.$uri.'/Capa_Presentacion/FormConsultarPerro.php');
 	exit;
 ?>

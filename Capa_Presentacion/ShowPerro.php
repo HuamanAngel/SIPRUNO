@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/css.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/css.php') ?>   
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/js.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/js.php') ?>   
 </head>
 <body>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/nav.php') ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/nav.php') ?>
 
 
     <main class="container custom-content-central">
@@ -23,7 +23,7 @@
             <div class="">
                 <div class="column">
                 </div>
-                <img class="img-thumbnail" src="<?php echo 'http://localhost:8087//tarea1/'.$dog["Foto"];?>" alt="">
+                <img class="img-thumbnail" src="<?php echo "http://".$_SERVER['SERVER_NAME'].$dog["Foto"];?>" alt="">
                 <form action="">
                     <h4 class="custom-title custom-size"> <?php echo $dog["Nombre"]; ?></h4>
                     <div class="class-grid-now-6">
@@ -31,7 +31,7 @@
 
                         </div>
                         <div class=" d-flex justify-content-end">                            
-                            <a href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoricConsulta.php?code='.$dog["DNI"]; ?>" class="btn btn-info" style="padding: 0px; background-color:transparent;border-color:transparent;">
+                            <a href="<?php echo "http://".$_SERVER['SERVER_NAME'].'/Capa_Logica/FormHistoricConsulta.php?code='.$dog["DNI"]; ?>" class="btn btn-info" style="padding: 0px; background-color:transparent;border-color:transparent;">
                                 <i style="color:burlywood ;font-size: 2rem;" class="material-icons">info</i>
                             </a>
 
@@ -47,7 +47,7 @@
                 </form>
 
 
-                <form action="http://localhost:8087/tarea1/Capa_Logica/EliminarPerro.php" method="post">
+                <form action="<?php echo "http://".$_SERVER['SERVER_NAME']."/Capa_Logica/EliminarPerro.php"; ?>" method="post">
                     <input type="hidden" name="DNI" value=<?php echo $dog["DNI"]; ?>>
                     <input type="hidden" name="Nombre" value=<?php echo $_REQUEST['Nombre']; ?>>
                     <div class="d-flex justify-content-center p-2">
@@ -62,10 +62,6 @@
 
             </div>
             <?php endforeach ?>
-            <!-- <div for="" class="d-flex justify-content-center p-4">
-                <a class="custom-link-to" href="http://localhost:8087/tarea1/Capa_Presentacion/FormConsultarPerro.php">Hacer otra consulta &#10140;</a>
-            </div> -->
-
         </div>
     </main>
     <br>
@@ -78,7 +74,7 @@
     <br>
     <br>
     <br>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/footer.php') ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/footer.php') ?>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelDog.php');   
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelDogDetail.php');   
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelDog.php');   
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelDogDetail.php');   
 
     $dogModel = new ModelDog();
     $dogModelDetail = new ModelDogDetail();

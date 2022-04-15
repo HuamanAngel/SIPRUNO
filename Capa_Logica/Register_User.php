@@ -1,5 +1,5 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelUser.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelUser.php');
 
     $modelUser = new ModelUser();
     $result = $modelUser->register($_REQUEST['name'],$_REQUEST['lastname'],$_REQUEST['username'],$_REQUEST['password']);

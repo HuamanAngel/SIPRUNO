@@ -1,19 +1,19 @@
 
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelDogDetail.php');   
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelDogDetail.php');   
     $dogModelDetail = new ModelDogDetail();
     $temp = $_FILES['rayx']['tmp_name'];
     $archivo = $_FILES['rayx']['name'];
     $tipo = $_FILES['rayx']['type'];
     $dir_db = $_REQUEST['dni'];
     $target_path_real = "uploads/";
-    $target_path = $_SERVER['DOCUMENT_ROOT'].'/tarea1/'.$target_path_real;
+    $target_path = $_SERVER['DOCUMENT_ROOT'].'/'.$target_path_real;
     $dir_db = $target_path_real.'ray_'.$dir_db;
 
 
     $ext = substr(strstr($tipo, '/', false), 1);
     $dir_db = $dir_db.'.'.$ext; 
-    $target_path = $_SERVER['DOCUMENT_ROOT'].'/tarea1/'.$target_path_real.'ray_'.$_REQUEST['dni'].'.'.$ext;
+    $target_path = $_SERVER['DOCUMENT_ROOT'].'/'.$target_path_real.'ray_'.$_REQUEST['dni'].'.'.$ext;
     $dog =$dogModelDetail->getForDni($_REQUEST['dni']);
     move_uploaded_file($temp, $target_path);
 

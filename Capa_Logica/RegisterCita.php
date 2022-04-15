@@ -1,5 +1,5 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelCita.php');   
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelCita.php');   
     $cita = new ModelCita();
     session_start();
     $result = $cita->insertCita($_REQUEST['user_id'],$_SESSION['user_id'] ,$_REQUEST['date'],$_REQUEST['hour']);

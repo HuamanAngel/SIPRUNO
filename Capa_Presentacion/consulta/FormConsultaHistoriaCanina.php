@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/css.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/css.php') ?>   
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/js.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/js.php') ?>   
 </head>
 <body>
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/nav.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/nav.php') ?>   
     <main class="container">
         <div class="custom-content-central">
         <h4 class="custom-title">Perrudatos</h4>
@@ -19,7 +19,7 @@
             <div class="row p-4">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5 col-12">
-                    <img style="width: 100%; height:250px" src="<?php echo 'http://localhost:8087/tarea1/'.$dog["Foto"];?>" alt=""> 
+                    <img style="width: 100%; height:250px" src="<?php echo "http://".$_SERVER['SERVER_NAME'].'/'.$dog["Foto"];?>" alt=""> 
                 </div>
                 <div class="col-lg-5 col-12 p-1">
                     <br>
@@ -49,7 +49,7 @@
                     <strong> <h5 class="text-center">Consulta : <?php echo $dogDetail["detail_fecha"]; ?> </h5> </strong>
                     <strong> <h6 class="text-center p-4">Datos del veterinario </h6> </strong>
                     <div class="text-center">
-                        <img style="height: 240px;" src="<?php echo 'http://localhost:8087/tarea1/src/assets/profile_doctor.jpg'; ?>" alt="error">
+                        <img style="height: 240px;" src="<?php echo "http://".$_SERVER['SERVER_NAME'].'/src/assets/profile_doctor.jpg'; ?>" alt="error">
                         <div class="text-center">
                             <label for="">MV. <?php echo $dogDetail['user_name'].' '.$dogDetail['user_lastname']; ?> </label>
 
@@ -94,7 +94,7 @@
                         <br>
                         <label for="" class="p-1">Inserte imagen de rayos X</label> 
                         <div class="custom-file">
-                            <img style="width: 100%; height:250px" src="<?php echo 'http://localhost:8087/tarea1/'.$dogDetail["detail_ray_img"];?>" alt=""> 
+                            <img style="width: 100%; height:250px" src="<?php echo "http://".$_SERVER['SERVER_NAME'].'/'.$dogDetail["detail_ray_img"];?>" alt=""> 
                         </div>                        
                         <br>
                         <label for="" class="p-1">Inserte diagnostico de sangre</label> 
@@ -117,6 +117,6 @@
 
     </main>
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/footer.php') ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/footer.php') ?>
 </body>
 </html>

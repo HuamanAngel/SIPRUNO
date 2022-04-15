@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/css.php') ?>   
-    <link rel="stylesheet" href="http://localhost:8087/tarea1/src/stylesheet/register.css">
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/css.php') ?>   
+    <link rel="stylesheet" href="<?php echo "http://".$_SERVER['SERVER_NAME']."/src/stylesheet/register.css"; ?> " >
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/js.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/js.php') ?>   
     <title>Document</title>
 </head>
 <body>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/nav.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/nav.php') ?>   
     <main class="login__main">
         <div class="card-header">
             <h4 class="text-center login__main__title">Registro - SIPRUNO</h4>
         </div>
         <div class="card-body">
-            <form onsubmit="" action="<?php echo "http://localhost:8087/tarea1/Capa_Logica/Register_User.php" ?>" method="post">
+            <form onsubmit="" action="<?php echo "http://".$_SERVER['SERVER_NAME']."/Capa_Logica/Register_User.php" ?>" method="post">
                 <div class="row">
                     <div class="col-md-5 d-flex aligns-items-center">
                         <img class="img-fluid" src="https://www.nicepng.com/png/detail/153-1533180_dulces-imagenes-de-perritos-mascotas-en-png-con.png" alt="">
@@ -72,7 +72,7 @@
     <br>
     <br>
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/footer.php') ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/footer.php') ?>
     <script>
         let password = document.getElementById('password');
         let characterMin = document.getElementById('character-min');

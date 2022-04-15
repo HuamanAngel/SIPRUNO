@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consilta perruna</title>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/css.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/css.php') ?>   
     
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/js.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/js.php') ?>   
 </head>
 <body>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/nav.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/nav.php') ?>   
     
     <main class="container custom-content-central">
         <h4 class="custom-title">Mis consultas</h4>
@@ -44,7 +44,7 @@
                             <?php endif ?>
                         </td>
                         <td>
-                            <a style="color: white; background-color:darkkhaki; border-radius:15%; text-decoration:none; " class="p-1" href="<?php echo 'http://localhost:8087/tarea1/Capa_Logica/FormHistoricConsulta.php?code='.$consult['DNI']; ?>">Ver consulta </a>
+                            <a style="color: white; background-color:darkkhaki; border-radius:15%; text-decoration:none; " class="p-1" href="<?php echo "http://".$_SERVER['SERVER_NAME'].'/Capa_Logica/FormHistoricConsulta.php?code='.$consult['DNI']; ?>">Ver consulta </a>
                         </td>
                     </tr>
                     <?php endforeach ?>
@@ -66,7 +66,7 @@
     <br>
     <br>
     
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/footer.php') ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/footer.php') ?>
 
 </body>
 </html>

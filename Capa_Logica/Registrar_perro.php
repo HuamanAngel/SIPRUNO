@@ -1,18 +1,18 @@
 <?php
 
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelDog.php');   
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelDog.php');   
     $dogModel = new ModelDog();
     $temp = $_FILES['Foto']['tmp_name'];
     $archivo = $_FILES['Foto']['name'];
     $tipo = $_FILES['Foto']['type'];
     $dir_db = $_REQUEST['Codigo'];
     $target_path_real = "uploads/";
-    $target_path = $_SERVER['DOCUMENT_ROOT'].'/tarea1/'.$target_path_real;
+    $target_path = $_SERVER['DOCUMENT_ROOT'].'/'.$target_path_real;
     $dir_db = $target_path_real.$dir_db;
 
     $ext = substr(strstr($tipo, '/', false), 1);
     $dir_db = $dir_db.'.'.$ext; 
-    $target_path = $_SERVER['DOCUMENT_ROOT'].'/tarea1/'.$target_path_real.$_REQUEST['Codigo'].'.'.$ext;
+    $target_path = $_SERVER['DOCUMENT_ROOT'].'/'.$target_path_real.$_REQUEST['Codigo'].'.'.$ext;
     
     move_uploaded_file($temp, $target_path);
     session_start();

@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consilta perruna</title>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/css.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/css.php') ?>   
     
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/js.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/js.php') ?>   
 </head>
 <body>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/nav.php') ?>   
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/nav.php') ?>   
     
 
     <main class="container custom-content-central">
@@ -45,7 +45,7 @@
             <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_is_admin']) ): ?>
                 <?php if ($_SESSION['user_is_admin'] ==  '1' ): ?>
                     <div for="" class="d-flex justify-content-center p-4">
-                        <a class="custom-link-to" href="http://localhost:8087/tarea1/Capa_Presentacion/FormRegistrarPerro.php">!No esta mi perro! Registrelo &#10140;</a>
+                        <a class="custom-link-to" href="<?php echo "http://".$_SERVER['SERVER_NAME']."/Capa_Presentacion/FormRegistrarPerro.php"; ?> ">!No esta mi perro! Registrelo &#10140;</a>
                     </div>
 
                 <?php endif ?>
@@ -66,7 +66,7 @@
     <br>
     <br>
     
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Presentacion/includes/footer.php') ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Presentacion/includes/footer.php') ?>
 
 </body>
 </html>

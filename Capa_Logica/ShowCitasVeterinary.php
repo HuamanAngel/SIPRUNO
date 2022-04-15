@@ -1,6 +1,6 @@
 
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'].'/tarea1/Capa_Datos/ModelCita.php');   
+    require_once($_SERVER['DOCUMENT_ROOT'].'/Capa_Datos/ModelCita.php');   
     $veterinary = new ModelCita();
     session_start();
     
