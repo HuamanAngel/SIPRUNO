@@ -2,9 +2,9 @@
     class ModelUser{
         private $obj_conexion;
         public function __construct()
-        {
-            $dsn = sprintf('mysql:dbname=%s;host=%s', "RelocaDB", "localhost");
-            $this->obj_conexion =  new PDO($dsn, "root", "oxipusio");        
+        {            
+            $dsn = sprintf('mysql:unix=/var/run/mysqld/mysqld.sock;dbname=%s', "RelocaDB");
+            $this->obj_conexion =  new PDO($dsn, "admin", "password");        
         }
         
         public function getAllVeterinary()
