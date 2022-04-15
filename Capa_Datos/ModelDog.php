@@ -9,14 +9,14 @@ class ModelDog{
     }
 
     public function getDogsForName($name){
-        $sql = "SELECT * FROM Perro WHERE Nombre LIKE '%".$name."%' AND status = 1";
+        $sql = "SELECT * FROM perro WHERE Nombre LIKE '%".$name."%' AND status = 1";
         $result = $this->obj_conexion->prepare($sql);
         $result->execute();
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getDogsForDni($dni){
-        $sql = "SELECT * FROM Perro WHERE DNI LIKE '".$dni."' AND status = 1";
+        $sql = "SELECT * FROM perro WHERE DNI LIKE '".$dni."' AND status = 1";
         $result = $this->obj_conexion->prepare($sql);
         $result->execute();
         return $result->fetch(PDO::FETCH_ASSOC);
