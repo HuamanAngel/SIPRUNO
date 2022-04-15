@@ -27,7 +27,7 @@
                         <a class="btn btn-danger" href="<?php echo "http://".$_SERVER['SERVER_NAME']."/Capa_Logica/Out_User.php" ?>">Salir</a>
                     <?php else : ?>
                         <li><a href="<?php echo "http://".$_SERVER['SERVER_NAME']."/Capa_Presentacion/user/Registro.php" ?>">Registro</a></li>
-                        <li><a href="<?php echo "http://".$_SERVER['SERVER_NAME']."/Capa_Presentacion/user/login.php" ?>">Login</a></li>
+                        <li><a href="<?php echo "http://".$_SERVER['SERVER_NAME']."/Capa_Presentacion/user/Login.php" ?>">Login</a></li>
                     <?php endif ?>
 
                 </ul>
