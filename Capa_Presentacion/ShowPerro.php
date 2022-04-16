@@ -23,7 +23,7 @@
             <div class="">
                 <div class="column">
                 </div>
-                <img class="img-thumbnail" src="<?php echo "http://".$_SERVER['SERVER_NAME'].$dog["Foto"];?>" alt="">
+                <img class="img-thumbnail" src="<?php echo "http://".$_SERVER['SERVER_NAME'].'/'.$dog["Foto"];?>" alt="">
                 <form action="">
                     <h4 class="custom-title custom-size"> <?php echo $dog["Nombre"]; ?></h4>
                     <div class="class-grid-now-6">
